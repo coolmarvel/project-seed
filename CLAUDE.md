@@ -38,6 +38,8 @@
 CLAUDE.md / AGENTS.md   # 이 발사대의 에이전트 지침 (지금 읽는 파일)
 INITIALIZE.md           # 킥오프 절차의 상세 SSOT
 README.md               # 사람용 소개·사용법
+guides/                 # 프로젝트 유형별 승격 지식 (해당 유형 킥오프 때만 새 프로젝트로 복사)
+└── desktop-packaging.md  #   exe/dmg(arm64·x64)/pkg 인스톨러 굽기 + 소스 보호(난독화) — pdf-editor 검증본
 templates/              # 새 프로젝트로 복사되는 모든 것 (아래는 복사 후 역할)
 ├── CLAUDE.md           #   프로젝트 에이전트 진입점 (부팅 프로토콜 + TODO(kickoff) 슬롯)
 ├── AGENTS.md           #   도구 중립 절대 규칙

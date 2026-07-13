@@ -60,6 +60,8 @@ chmod +x scripts/hooks/*.sh
 4. **포맷 훅 추가**: `scripts/hooks/format.sh` 를 스택의 포매터(prettier/pint/ruff/gofmt …)로 작성하고
    `.claude/settings.json` 의 PostToolUse 에 연결한다 (env-guard/git-add-guard 는 이미 연결돼 있음).
 5. 필요하면 `.mcp.json` 에 스택 전용 MCP 서버를 추가한다 (기본: context7 + playwright).
+6. **데스크톱 앱이면**: 발사대의 `guides/desktop-packaging.md` 를 새 프로젝트
+   `docs/guides/packaging.md` 로 복사하고 제품명·appId·빌드 스크립트를 실제 값으로 구체화한다.
 
 ## 7. 프로젝트 CLAUDE.md 자기완성
 
