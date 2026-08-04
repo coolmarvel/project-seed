@@ -4,6 +4,11 @@
 각 단계의 **산출물**이 나와야 다음으로 넘어간다. 사용자 확인이 필요한 지점은 ✋ 로 표시.
 
 > 원칙: **대화가 코드보다 먼저다.** 스택 얘기는 3단계(브리프 확정) 전에 꺼내지 않는다.
+>
+> 질문 방식: 선택지가 있는 질문(✋ 확정 지점, 플랫폼/제약/스택 후보 등)은 텍스트로 나열하지 말고
+> **선택형 질문 UI**(Claude Code의 `AskUserQuestion` 도구 등)로 제시한다 — 한 번에 최대 4개 질문,
+> 질문당 선택지 2~4개, 권장안이 있으면 첫 번째 선택지로 놓고 "(권장)" 표기. 자유 서술이 필요한
+> 질문(첫 아이디어 설명, 성공 기준을 사용자 입으로 말하게 하기)만 일반 텍스트로 묻는다.
 
 ## 0. 프로젝트 이름·위치
 
@@ -32,7 +37,11 @@ chmod +x scripts/hooks/*.sh
 ```
 
 그 다음 플레이스홀더 치환: 복사된 모든 파일에서 `{{PROJECT_NAME}}` → 프로젝트 이름,
-`{{DATE}}` → 오늘 날짜(YYYY-MM-DD). 이후 작업은 전부 **새 프로젝트 디렉토리에서** 한다.
+`{{DATE}}` → 오늘 날짜(YYYY-MM-DD), `{{YEAR}}` → 현재 연도(YYYY). 이후 작업은 전부
+**새 프로젝트 디렉토리에서** 한다.
+
+> `templates/LICENSE` 도 함께 복사된다 — 제작자(이성현/SeongHyun Lee) 라이센스 전문. 위 치환으로
+> 프로젝트명·연도가 채워진다. 저작자 표기를 스택별로 어디에 넣는지는 `guides/licensing-and-branding.md`.
 
 ## 3. 브리프 작성 — `docs/brief.md`
 
@@ -62,6 +71,9 @@ chmod +x scripts/hooks/*.sh
 5. 필요하면 `.mcp.json` 에 스택 전용 MCP 서버를 추가한다 (기본: context7 + playwright).
 6. **데스크톱 앱이면**: 발사대의 `guides/desktop-packaging.md` 를 새 프로젝트
    `docs/guides/packaging.md` 로 복사하고 제품명·appId·빌드 스크립트를 실제 값으로 구체화한다.
+7. **라이센스·저작자 표기 적용**: `guides/licensing-and-branding.md` 를 따라 스택별 위치
+   (package.json / csproj / Inno `.iss` / pyproject 등)에 제작자(이성현)·저작권·라이센스를 채운다.
+   설치형 앱이면 인스톨러에 라이센스 동의 페이지(`LICENSE`)와 저작권 VersionInfo 를 반드시 넣는다.
 
 ## 7. 프로젝트 CLAUDE.md 자기완성
 
