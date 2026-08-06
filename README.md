@@ -49,3 +49,16 @@ claude        # 또는 codex 등 — AGENTS.md 를 읽는 도구면 동일하게
 
 여러 프로젝트에서 반복 검증된 규칙이 생기면 이 저장소의 `templates/` 로 승격한다.
 한 프로젝트의 특수 사정은 그 프로젝트 CLAUDE.md 에 남긴다.
+
+## 제작자
+
+<img src="assets/branding/이성현_반명함.jpg" alt="이성현 (SeongHyun Lee)" width="96" align="left" style="margin-right:12px">
+
+**이성현 (SeongHyun Lee)** — chungmu.xyz@gmail.com
+
+여기서 발사되는 모든 프로젝트의 저작권은 제작자에게 있다 (UNLICENSED · 개인 저작물).
+표기 규칙은 `guides/licensing-and-branding.md`, 라이센스 전문은 `templates/LICENSE`.
+
+<br clear="left">
+
+© 2026 이성현 (SeongHyun Lee). All rights reserved.

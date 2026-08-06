@@ -41,6 +41,7 @@
 CLAUDE.md / AGENTS.md   # 이 발사대의 에이전트 지침 (지금 읽는 파일)
 INITIALIZE.md           # 킥오프 절차의 상세 SSOT
 README.md               # 사람용 소개·사용법
+assets/branding/        # 제작자 브랜딩 자산 — 사진(공개 OK)·서명(로컬 전용, gitignore됨). 규칙: guides/licensing-and-branding.md
 guides/                 # 승격 지식 (킥오프 때 참고/복사)
 ├── desktop-packaging.md    #   exe/dmg(arm64·x64)/pkg 인스톨러 굽기 + 소스 보호 — pdf-editor 검증본
 └── licensing-and-branding.md  # 제작자(이성현) 라이센스·저작권을 스택별로 적용하는 법 (모든 프로젝트 공통)

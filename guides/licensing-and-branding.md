@@ -1,7 +1,7 @@
 ---
 title: 라이센스·저작자 브랜딩 가이드 (모든 프로젝트 공통)
 created: 2026-08-04
-updated: 2026-08-04
+updated: 2026-08-05
 domain: licensing
 ---
 
@@ -25,6 +25,21 @@ domain: licensing
 
 > 라이센스 전문 템플릿은 `templates/LICENSE` 에 있다 — 킥오프 시 새 프로젝트 루트로 자동 복사되고
 > `{{PROJECT_NAME}}`·`{{YEAR}}` 가 치환된다. 그 파일이 "사람이 읽는 라이센스"의 원본이다.
+
+## 브랜딩 자산 (사진·서명) — 공개 범위 규칙
+
+이 발사대의 `assets/branding/` 에 제작자 브랜딩 자산을 둔다 (sh-asset 킥오프 때 도입, 2026-08-05):
+
+| 자산 | 파일 | 공개 범위 |
+|---|---|---|
+| 프로필 사진(반명함) | `assets/branding/이성현_반명함.jpg` | **공개 OK** — 발사대·새 프로젝트 README 저작자 섹션에 사용 가능 |
+| 서명 이미지 | `assets/branding/이성현_서명.png` | **로컬 전용 — 어떤 저장소에도 커밋 금지** (`.gitignore` 로 차단됨) |
+
+- **서명 이미지는 public 저장소에 올리면 위조 서명에 도용될 수 있다.** 이 발사대(project-seed)도
+  public 이므로 예외가 아니다 — `.gitignore` 가 막고 있고, 새 프로젝트로도 복사하지 않는다.
+  서명 원본은 로컬(`/mnt/c/Users/user/Desktop/이성현/`)이 SSOT.
+- 새 프로젝트 README 에 저작자 섹션을 넣을 때는 **사진만** 복사한다
+  (예: `docs/assets/branding/이성현_반명함.jpg`). 인스톨러·문서의 저작자 표기는 텍스트(위 표)로 충분하다.
 
 ## 스택별 적용 위치
 

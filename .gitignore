@@ -1,2 +1,5 @@
 .DS_Store
 .claude/settings.local.json
+
+# 서명 이미지는 로컬 전용 — public 저장소(이 저장소 포함)에 절대 커밋 금지 (도용 위험)
+assets/branding/이성현_서명.png
