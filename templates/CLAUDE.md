@@ -80,6 +80,23 @@ type: `feat` `fix` `refactor` `chore` `docs` `style` `test` `perf` `ci` `build` 
 "새 기능 추가 = ① 모델 ② 로직 ③ 화면 ④ 테스트 …" 체크리스트 형태 권장.
 "어기면 재발하는 함정"(과거 사고)이 생기면 여기에 1줄씩 박제. -->
 
+## 디자인 시스템 (oh-my-design)
+
+<!-- TODO(kickoff): UI 가 없는 프로젝트(CLI·서버·라이브러리)면 이 절을 통째로 지운다. -->
+
+디자인 레퍼런스: <!-- TODO(kickoff): 베이스 브랜드 (예: Toss) + 차용 (예: 카드=Naver, 모달=AWS) -->
+디자인 계약은 루트 **`DESIGN.md`** (프로젝트 소유, 커밋 대상). 색·간격·컴포넌트 구조는 여기서만 정하고
+코드에 임의 값을 넣지 않는다. 설치 확인: `npx oh-my-design-cli@latest doctor`.
+
+| 상황 | 반드시 쓰는 명령 |
+|---|---|
+| 새 화면·기능 UI 만들기 | `/omd:harness` (조사→설계→구현→검증, 체크포인트 3개) — 작은 컴포넌트 하나면 `/omd:apply` |
+| 기존 UI 손보기 | `/omd:apply` 로 `DESIGN.md` 기준 수정 → `/omd:slop-audit` |
+| UI 작업 마무리 전 | `/omd:slop-audit`(AI 티·일관성 감사) + `/omd:feel`(사용감 점검) 통과 후에만 산출물 전달 |
+| 디자인 원칙·토큰 바꾸기 | `/omd:init` 재실행 또는 `DESIGN.md` 직접 수정 → 변경 이유를 `docs/adr/` 에 기록 |
+| 디자인 문서 열람 | `npx oh-my-design-cli@latest book` (localhost:6060) |
+| 번들 갱신 | `npx oh-my-design-cli@latest update` 후 `doctor` |
+
 ## 하네스 (Harness Engineering)
 
 지시문이 아니라 시스템으로 제약한다. 도입 근거: `docs/adr/0001-harness-engineering.md`.
@@ -89,4 +106,4 @@ type: `feat` `fix` `refactor` `chore` `docs` `style` `test` `perf` `ci` `build` 
 | Hooks (`scripts/hooks/`) | `env-guard.sh`(.env 편집 차단) · `git-add-guard.sh`(`git add -A/.`·.env staging 차단) · <!-- TODO(kickoff): format.sh — 스택 포매터로 작성해 PostToolUse 연결 --> |
 | Commands (`.claude/commands/`) | `/review-security` · `/deploy-check` <!-- TODO(kickoff): 스택별 /review-* 추가 검토 --> |
 | MCP (`.mcp.json`) | `context7`(라이브러리 문서) · `playwright`(브라우저 QA) <!-- TODO(kickoff): 스택 전용 서버 추가 검토 --> |
-| Skills | <!-- TODO(kickoff): 스택별 스킬 도입 시 skills-lock.json + scripts/install-skills.sh 방식(cm_groupware 참고)으로 락 --> |
+| Skills | oh-my-design 번들(`/omd:*` 22개 스킬 + 19개 서브에이전트, UI 있을 때) · <!-- TODO(kickoff): 스택별 스킬 도입 시 skills-lock.json + scripts/install-skills.sh 방식(cm_groupware 참고)으로 락 --> |
