@@ -106,4 +106,4 @@ type: `feat` `fix` `refactor` `chore` `docs` `style` `test` `perf` `ci` `build` 
 | Hooks (`scripts/hooks/`) | `env-guard.sh`(.env 편집 차단) · `git-add-guard.sh`(`git add -A/.`·.env staging 차단) · <!-- TODO(kickoff): format.sh — 스택 포매터로 작성해 PostToolUse 연결 --> |
 | Commands (`.claude/commands/`) | `/review-security` · `/deploy-check` <!-- TODO(kickoff): 스택별 /review-* 추가 검토 --> |
 | MCP (`.mcp.json`) | `context7`(라이브러리 문서) · `playwright`(브라우저 QA) <!-- TODO(kickoff): 스택 전용 서버 추가 검토 --> |
-| Skills | oh-my-design 번들(`/omd:*` 22개 스킬 + 19개 서브에이전트, UI 있을 때) · <!-- TODO(kickoff): 스택별 스킬 도입 시 skills-lock.json + scripts/install-skills.sh 방식(cm_groupware 참고)으로 락 --> |
+| Skills | oh-my-design 번들(`/omd:*` 22개 스킬 + 19개 서브에이전트, UI 있을 때) · <!-- TODO(kickoff): 스택별 스킬 도입 시 skills-lock.json + scripts/install-skills.sh 방식으로 락 --> |

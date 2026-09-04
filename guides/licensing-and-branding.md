@@ -9,7 +9,6 @@ domain: licensing
 
 **모든 새 프로젝트는 제작자의 라이센스·저작권 표기를 일관되게 적용한다.** 언어·프레임워크가
 무엇이든 아래 정체(identity)를 그대로 쓰고, 스택별 "적용 위치"에 값을 채운다.
-(sh-ip-scanner(C#/Avalonia/Inno), pdf-editor·file-converter(Electron) 에서 검증해 승격.)
 
 ## 제작자 정체 (SSOT — 이 값을 그대로 쓴다)
 
@@ -28,7 +27,7 @@ domain: licensing
 
 ## 브랜딩 자산 (사진·서명) — 공개 범위 규칙
 
-이 발사대의 `assets/branding/` 에 제작자 브랜딩 자산을 둔다 (sh-asset 킥오프 때 도입, 2026-08-05):
+이 발사대의 `assets/branding/` 에 제작자 브랜딩 자산을 둔다:
 
 | 자산 | 파일 | 공개 범위 |
 |---|---|---|
