@@ -33,7 +33,7 @@ claude        # 또는 codex 등 — AGENTS.md 를 읽는 도구면 동일하게
 | `CLAUDE.md` | 세션 부팅 프로토콜(🟢) + 변경 후 자동 규칙(🔴) + 버전 정책 + 커밋 컨벤션. 킥오프가 스택 확정 값으로 자기완성 |
 | `AGENTS.md` | 도구 중립 절대 규칙 (Claude 외 에이전트용) |
 | `docs/` | writing-guide(문서 지배 규칙) · brief(왜/무엇 SSOT) · session-log(이력 SSOT) · todo(P1~P4) · changelog · adr/ · plans/ · guides/ · feedback-archive/ |
-| 하네스 | `scripts/hooks/`(env-guard·git-add-guard + 스택별 format), `.claude/commands/`(/review-security, /deploy-check), `.mcp.json`(context7·playwright) |
+| 하네스 | `scripts/hooks/`(env-guard·git-add-guard + 스택별 format), `.claude/commands/`(/review-security, /deploy-check), `.mcp.json`(context7·playwright), `.claude/settings.json`(Remote Control 차단 — 대화가 claude.ai 에 동기화되지 않게) |
 
 ## 핵심 원칙
 
@@ -43,6 +43,15 @@ claude        # 또는 codex 등 — AGENTS.md 를 읽는 도구면 동일하게
 4. **검증 없이 전달하지 않는다** — 검증 루프는 킥오프에서 확정하고 자동 규칙으로 돌린다.
 5. **제약은 시스템으로** — 지시문이 아니라 훅이 막는다 (.env 편집, `git add -A` 등).
 6. **커밋/푸시는 사용자가 직접** — 에이전트는 커밋 메시지를 작성한다.
+
+## 새 PC 에서 처음 쓸 때 (사용자 설정)
+
+프로젝트 `.claude/settings.json` 이 Remote Control 을 막지만, 프로젝트 밖에서 `claude` 를 띄울 때도 막으려면
+PC 마다 한 번 `~/.claude/settings.json` 에 같은 값을 둔다 (또는 `/config` → "Enable Remote Control for all sessions" 를 false):
+
+```json
+{ "disableRemoteControl": true, "remoteControlAtStartup": false }
+```
 
 ## 이 저장소를 발전시키기
 

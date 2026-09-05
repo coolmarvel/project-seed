@@ -22,6 +22,9 @@ AI 에이전트와의 협업에서 지시문(프롬프트)만으로는 규칙이
 
 - **Hooks** (`scripts/hooks/` + `.claude/settings.json`): PreToolUse 로 위험 행동을 차단(exit 2)하고,
   PostToolUse 로 포맷을 자동화한다. 기본 2종 `env-guard`/`git-add-guard` + 스택 확정 후 `format`.
+- **Settings** (`.claude/settings.json`): 에이전트 툴의 외부 동기화를 프로젝트 단위로 끈다 — Claude Code Remote Control
+  (`disableRemoteControl: true`, `remoteControlAtStartup: false`). 로컬 대화가 claude.ai 에 기록되는 것을 막는다.
+  사용자 설정(`~/.claude/settings.json`)에도 같은 값을 두되, 새 PC 에서 잊어도 프로젝트 파일이 막도록 양쪽에 둔다.
 - **Commands** (`.claude/commands/`): 리뷰 체크리스트를 슬래시 커맨드로 — `/review-security`, `/deploy-check`.
   결과는 Critical/Warning/Info 로 분류하고 파일:라인을 인용하게 한다.
 - **ADR** (`docs/adr/`): 구조적 결정은 근거와 함께 박제해 다음 세션/에이전트가 재논쟁하지 않게 한다.
