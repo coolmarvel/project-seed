@@ -15,10 +15,19 @@
 ```bash
 git clone https://github.com/coolmarvel/project-seed.git
 cd project-seed
-claude        # 또는 codex 등 - AGENTS.md 를 읽는 도구면 동일하게 동작
+claude        # Claude Code
+# 또는 같은 디렉토리에서 codex 실행
 ```
 
-그리고 만들고 싶은 것을 설명하면 된다. 예:
+새 세션에서 "let's go" 또는 "시작하자"만 입력하면 선택형 인터뷰를 시작한다. 이전 대화를
+이어갈 필요는 없다. Claude는 `CLAUDE.md`, Codex는 `AGENTS.md` 를 진입 지침으로 사용하고,
+둘 다 `INITIALIZE.md` 의 공통 절차를 따른다. 별도 `CODEX.md` 는 필요하지 않다.
+
+Codex는 `request_user_input` 으로 선택 질문을 제시한다. 이 도구가 Plan 모드에서만 제공되는
+환경에서는 안내에 따라 Plan 모드로 전환한다. 인터뷰와 설계 후 실제 파일 생성에는 실행 가능한
+모드가 필요하다. 선택 도구 자체가 없는 환경에서는 제한을 안내하고 텍스트 응답으로 진행한다.
+
+만들고 싶은 것을 처음부터 설명해도 된다. 이미 제공한 내용을 반영해 다음 질문을 이어간다. 예:
 
 > "재즈 커뮤니티 앱. 뮤지션·클럽 사장·일반 유저가 있고, 공연 일정을 보고 예약하고
 > 후기를 남기고, 사장과 뮤지션은 채팅으로 일정을 잡고 결제하고..."
